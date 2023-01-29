@@ -10,10 +10,10 @@ struct Process {
     int priority;
     int arrivalTime;
     vector<pair<char, int>> bursts;
-	int turnaroundTime;
-	int responseTime;
-	int waitingTime;
-	int totalBurst;
+    int turnaroundTime;
+    int responseTime;
+    int waitingTime;
+    int totalBurst;
 };
 
 void readData(string fileName, int &numProcesses, int &quantum, vector<Process> &processes) {
@@ -39,7 +39,7 @@ void readData(string fileName, int &numProcesses, int &quantum, vector<Process> 
             }
 
             processes.push_back(p);
-			inputFile >> device;
+            inputFile >> device;
         }
 
         inputFile.close();
@@ -169,12 +169,11 @@ int main() {
     vector<Process> processes;
     readData("input.dat", numProcesses, quantum, processes);
 
-	cout << endl;
+    cout << endl;
     FCFS(processes);
-	cout << endl;
+    cout << endl;
     SJF(processes);
-	cout << endl;
+    cout << endl;
 
     return 0;
 }
-
